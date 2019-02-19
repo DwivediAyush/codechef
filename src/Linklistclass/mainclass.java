@@ -1,10 +1,10 @@
 package Linklistclass;
 
-import java.sql.SQLOutput;
 
 public class mainclass {
-    linklist head;
-    linklist start;
+   private linklist head;
+    private linklist start;
+
     public void insert(int d)
     {
         linklist temp=new linklist(d);
@@ -20,6 +20,13 @@ public class mainclass {
 
         }
     }
+   public void reverse(linklist temp )
+    {
+        if (temp == null) return;
+        reverse(temp.next);
+        System.out.print(temp.data+" ");
+    }
+
     public void display()
     {
         if (start == null) {
@@ -46,6 +53,6 @@ public class mainclass {
         obj.display();
         obj.insert(24);
         obj.display();
-
+  obj.reverse(obj.head);
     }
 }
