@@ -2,21 +2,21 @@ package Linklistclass;
 
 
 public class mainclass {
-   private linklist head;
+   private linklist last;
     private linklist start;
 
     public void insert(int d)
     {
         linklist temp=new linklist(d);
-        if(head==null)
+        if(last==null)
         {
-            head=temp;
+            last=temp;
             start=temp;
         }
         else
-        {   temp.next=head;//begin
+        {   temp.next=last;//begin
             //head.next=temp;//at the end
-            head=temp;
+            last=temp;
 
         }
     }
@@ -33,7 +33,7 @@ public class mainclass {
             System.out.println("list is empty");
         }
         else {
-            linklist temp=head;//at thr begin
+            linklist temp=last;//at thr begin
             //linklist temp=start;//at the end;
             System.out.println(temp.data);
 
@@ -53,6 +53,6 @@ public class mainclass {
         obj.display();
         obj.insert(24);
         obj.display();
-  obj.reverse(obj.head);
+  obj.reverse(obj.last);
     }
 }
