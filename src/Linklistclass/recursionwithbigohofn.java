@@ -25,7 +25,7 @@ public class recursionwithbigohofn {
     public static void main(String[] args) {
         long tstra=System.nanoTime();
         Arrays.fill(m,-1);
-        System.out.println(recu(50));
+        System.out.println(recu(100));
         long tf=System.nanoTime();
         System.out.println(tf-tstra);
     }
